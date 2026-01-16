@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/9ilyasK/ipl-social2/issues"
   },
-  "homepage": "https://github.com/9ilyasK/ipl-social2#readme"
+  "homepage": "https://github.com/9ilyasK/ipl-social2#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
 }

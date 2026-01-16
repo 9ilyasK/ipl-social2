@@ -4,8 +4,12 @@ describe('Validation Email TDD', () => {
     test('Doit valider un email simple et correct', () => {
         expect(validerEmail("eleve@vinci.be")).toBe(true);
     });
-    
+
     test('Doit rejeter les emails avec espaces', () => {
         expect(validerEmail("eleve @vinci.be")).toBe(false);
+    });
+    
+    test('Doit rejeter si pas de @', () => {
+        expect(validerEmail("elevevinci.be")).toBe(false);
     });
 });

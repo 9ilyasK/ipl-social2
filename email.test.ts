@@ -8,8 +8,13 @@ describe('Validation Email TDD', () => {
     test('Doit rejeter les emails avec espaces', () => {
         expect(validerEmail("eleve @vinci.be")).toBe(false);
     });
-    
+
     test('Doit rejeter si pas de @', () => {
         expect(validerEmail("elevevinci.be")).toBe(false);
+    });
+    
+    test('Doit rejeter si rien avant ou après le @', () => {
+        expect(validerEmail("@vinci.be")).toBe(false);
+        expect(validerEmail("eleve@")).toBe(false);
     });
 });

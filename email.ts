@@ -3,10 +3,13 @@ export function validerEmail(email: string): boolean {
     if (email.indexOf("@") === -1) return false;
 
     const parties = email.split("@");
-    if (parties.length !== 2) return false; 
+    if (parties.length !== 2) return false;
     const [avant, apres] = parties;
     
     if (avant.length === 0 || apres.length === 0) return false;
+
+    if (apres.indexOf(".") === -1) return false;
+    if (apres.endsWith(".")) return false;       
 
     return true;
 }
